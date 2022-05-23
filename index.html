@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="javin.css">
+</head>
+<body>
+    <header><h1>DIA DE LA SEMANA</h1></header>
+    <section class="res"></section>
+    <br>
+    <input type="number" id="numeroA">
+    <button id="btn">dia</button>
+    <br>
+    <section>
+        <div id="resultado"></div>
+    </section>
+    <script >
+
+        var b=document.getElementById('btn');
+        b.addEventListener('click',dias);
+
+        function dias(){
+            var n1=parseInt(document.getElementById("numeroA").value);
+            var dias=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+            midia=n1
+            midia--;
+            if (midia>=0 && midia<7){
+                r=dias[midia];
+            }
+            else{
+                r="No existe ese dia";
+            }
+            document.getElementById("resultado").innerHTML="el dia es: "+r;
+        }
+    </script>
+</body>
+</html>
